@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Components</title>
+  <meta name="description" content="Component library: buttons, card, form elements, alerts and a CSS-only modal.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <h1>My Blog</h1>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="components.html" aria-current="page">Components</a>
+    </nav>
+  </header>
+
+  <main class="container" id="main">
+    <h2>Component library</h2>
+    <p class="label">Every style here comes from the CSS variables in style.css.</p>
+
+    <section class="section" aria-labelledby="buttons">
+      <h3 id="buttons">Buttons</h3>
+      <div class="row">
+        <div><button class="btn" type="button">Default</button><div class="label">default</div></div>
+        <div><button class="btn is-hover" type="button">Hover</button><div class="label">hover</div></div>
+        <div><button class="btn" type="button" disabled>Disabled</button><div class="label">disabled</div></div>
+        <div><button class="btn btn-outline" type="button">Outline</button><div class="label">outline</div></div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="card">
+      <h3 id="card">Card</h3>
+      <article class="card" style="max-width: 360px">
+        <h3>Card title</h3>
+        <p>A short description that explains what this card is about.</p>
+        <a class="btn" href="#card">Read more</a>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="forms">
+      <h3 id="forms">Form elements</h3>
+      <form class="form card" action="#" method="post">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input class="input" type="text" id="name" name="name" autocomplete="name" placeholder="Jane Doe" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input class="input" type="email" id="email" name="email" autocomplete="email" aria-describedby="email-hint" required>
+          <span class="hint" id="email-hint">We only use this to reply to you.</span>
+        </div>
+        <div class="field">
+          <label for="topic">Topic</label>
+          <select class="select" id="topic" name="topic">
+            <option value="general">General question</option>
+            <option value="support">Support</option>
+            <option value="feedback">Feedback</option>
+          </select>
+        </div>
+        <div class="row">
+          <button class="btn" type="submit">Send message</button>
+          <button class="btn btn-outline" type="reset">Clear form</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="section" aria-labelledby="alerts">
+      <h3 id="alerts">Alerts</h3>
+      <div class="alert alert-info" role="status"><strong>Heads up</strong> Your session will expire in 10 minutes.</div>
+      <div class="alert alert-success" role="status"><strong>Saved</strong> Your changes were saved.</div>
+      <div class="alert alert-error" role="alert"><strong>Could not send</strong> Check your connection and try again.</div>
+    </section>
+
+    <section class="section" aria-labelledby="modal">
+      <h3 id="modal">Modal window (CSS only)</h3>
+      <p class="label">Built with the :target selector. No JavaScript.</p>
+      <a class="btn" href="#demo-modal">Open modal</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 My Blog</p>
+  </footer>
+
+  <div class="modal" id="demo-modal">
+    <a class="modal-backdrop" href="#modal" aria-label="Close dialog" tabindex="-1"></a>
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="demo-modal-title">
+      <a class="modal-close" href="#modal" aria-label="Close dialog">&times;</a>
+      <h2 id="demo-modal-title">Delete this item?</h2>
+      <p>This action can't be undone.</p>
+      <a class="btn" href="#modal">Delete item</a>
+      <a class="btn btn-outline" href="#modal">Cancel</a>
+    </div>
+  </div>
+</body>
+</html>
